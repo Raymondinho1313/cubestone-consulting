@@ -1,68 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | Cubestone Consulting</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"> <!-- Assuming you might move styles to a CSS file later -->
-<style>
-    /* Reusing essential styles from index.html */
-    :root {
-        --font-heading: 'Montserrat', sans-serif;
-        --font-body: 'Open Sans', sans-serif;
-        --navy: #0a1628;
-        --navy-mid: #0f2040;
-        --electric: #2e8fff;
-        --teal: #00d4c8;
-        --off-white: #f2f5fb;
-        --text: #1c2b45;
-        --muted: #5d6f8a;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: var(--font-body); color: var(--text); background: var(--off-white); padding-top: 72px; }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 22, 40, 0.96); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(46,143,255,0.12); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 72px; }
-    .logo { display: flex; align-items: center; gap: 13px; text-decoration: none; color: white; font-family: var(--font-heading); font-weight: 700; font-size: 1.45rem; }
-    .nav-links { display: flex; gap: 2.2rem; list-style: none; align-items: center; }
-    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; font-weight: 500; }
-    .content-section { padding: 5rem 10%; max-width: 1200px; margin: 0 auto; line-height: 1.8; }
-    h1 { font-family: var(--font-heading); font-size: 3rem; color: var(--navy); margin-bottom: 2rem; }
-    h2 { font-family: var(--font-heading); color: var(--navy); margin: 2rem 0 1rem; }
-    footer { background: #060d1c; padding: 3rem 5% 2rem; color: rgba(255,255,255,0.4); text-align: center; }
-    .btn-primary { background: linear-gradient(135deg, var(--electric), var(--teal)); color: white; text-decoration: none; padding: 0.9rem 2.2rem; border-radius: 10px; font-weight: 600; display: inline-block; margin-top: 2rem; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Cubestone Consulting · IT & Accounting Tanzania</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific styles for the About page layout */
+        .about-hero {
+            background: var(--navy);
+            padding: 8rem 5% 4rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .content-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s;
+        }
+        .content-card:hover { transform: translateY(-5px); }
+        .industry-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .industry-item {
+            background: var(--light-blue);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .testi-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--electric);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
 
-<nav>
+<nav id="main-nav">
   <a class="logo" href="index.html">
-    CUBESTONE
+    <div class="logo-mark">C</div>
+    <div class="logo-text">
+        <span class="logo-name">CUBESTONE</span>
+        <span class="logo-sub">CONSULTING</span>
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
     <li><a href="index.html#services">Services</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="index.html#contact">Contact Us</a></li>
   </ul>
 </nav>
 
-<main class="content-section">
-    <h1>About Cubestone Consulting</h1>
-    <p>Welcome to the detailed history and mission of Cubestone Consulting. Established in May 2018 and fully registered with the National Board of Accountants and Auditors (NBAA) in July 2018, we have grown into a leading multi-disciplinary firm in Tanzania.</p>
-    
-    <h2>Our Vision</h2>
-    <p>To be the premier provider of integrated financial and technological solutions, enabling businesses in East Africa to achieve sustainable growth through transparency and innovation.</p>
+<section class="about-hero">
+    <div class="hero-badge"><i></i>ESTABLISHED 2018</div>
+    <h1 class="hero-title">We are IT and <strong>Accounting Consultants</strong></h1>
+    <p class="hero-desc" style="margin: 0 auto 2rem;">Established in May 2018 and registered by the NBAA on 13th July 2018, we provide first-class tailored services with fixed costs.</p>
+</section>
 
-    <h2>Our Journey</h2>
-    <p>Starting with a small office in Dar es Salaam, we recognized a gap in the market for professional services that combined traditional accounting with modern ICT infrastructure. Today, we serve over 40 active clients across various sectors, including logistics, construction, and retail.</p>
+<section class="content-section">
+    <div class="mission-vision-grid">
+        <div class="content-card">
+            <span class="svc-ico">🚀</span>
+            <h3>Our Mission</h3>
+            <p>To serve and protect the interest of our customers by advising them to building value, improving performance, and improvising associated risks.</p>
+        </div>
+        <div class="content-card">
+            <span class="svc-ico">👁️</span>
+            <h3>Our Vision</h3>
+            <p>To be the best consulting firm in Tanzania and providing high-quality services to our clients.</p>
+        </div>
+    </div>
+</section>
 
-    <h2>Our Approach</h2>
-    <p>We believe in "Fixed Pricing" models to remove the anxiety of hourly billing, allowing our consultants to focus entirely on the quality of the solution rather than the time spent. Our team brings together ACCA, CPA(T), and SAP Certified professionals to provide a 360-degree view of your business health.</p>
+<section id="why" style="background: white;">
+    <div class="why-wrap">
+        <div class="section-header centered">
+            <span class="section-label">Our People</span>
+            <h2 class="section-title">Dedication & Continuity</h2>
+            <p class="section-sub">Our average staff tenure is in excess of 10 years. We provide our people with the ability to grow through innovative technology development opportunities.</p>
+        </div>
+    </div>
+</section>
 
-    <a href="index.html#contact" class="btn-primary">Work With Us</a>
-</main>
+<section class="content-section">
+    <div class="section-header">
+        <span class="section-label">Expertise</span>
+        <h2 class="section-title">Industries We Serve</h2>
+    </div>
+    <div class="industry-list">
+        <div class="industry-item">Manufacturing</div>
+        <div class="industry-item">Investment</div>
+        <div class="industry-item">Logistics & Transport</div>
+        <div class="industry-item">Professional Services</div>
+        <div class="industry-item">Clearing & Forwarding</div>
+        <div class="industry-item">Insurance</div>
+    </div>
+</section>
+
+<section id="testimonials" style="background: var(--off-white); padding: 5rem 5%;">
+    <div class="section-header centered">
+        <h2 class="section-title">What Clients Say</h2>
+    </div>
+    <div class="testimonial-grid">
+        <div class="testi-card">
+            "Amazing work. PERIOD. Service is always perfect, creativity is always on point, and the team is very friendly."
+        </div>
+        <div class="testi-card">
+            "Top notch branding and creative services. The quality of work is outstanding and professionalism always amazing."
+        </div>
+        <div class="testi-card">
+            "Very professional and pays close attention to detail. CAC is pleased with the skills Adam brings to the table."
+        </div>
+    </div>
+</section>
 
 <footer>
-    <p>&copy; 2024 Cubestone Consulting. All Rights Reserved.</p>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a class="logo" href="#">
+                    <span class="logo-name">CUBESTONE</span>
+                </a>
+                <p>2nd Floor Viva Towers, Ali Hassan Mwinyi Road, Dar Es salaam, TZ.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li>info@cubestone.com</li>
+                    <li>+255 655 897 798</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>©2018 - 2026 All Rights Reserved Cubestone | Designed by Shoovisual</p>
+        </div>
+    </div>
 </footer>
 
 </body>
