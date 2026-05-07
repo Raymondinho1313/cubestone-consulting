@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Cubestone Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"> <!-- Assuming you might move styles to a CSS file later -->
+<style>
+    /* Reusing essential styles from index.html */
+    :root {
+        --font-heading: 'Montserrat', sans-serif;
+        --font-body: 'Open Sans', sans-serif;
+        --navy: #0a1628;
+        --navy-mid: #0f2040;
+        --electric: #2e8fff;
+        --teal: #00d4c8;
+        --off-white: #f2f5fb;
+        --text: #1c2b45;
+        --muted: #5d6f8a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-body); color: var(--text); background: var(--off-white); padding-top: 72px; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 22, 40, 0.96); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(46,143,255,0.12); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo { display: flex; align-items: center; gap: 13px; text-decoration: none; color: white; font-family: var(--font-heading); font-weight: 700; font-size: 1.45rem; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; font-weight: 500; }
+    .content-section { padding: 5rem 10%; max-width: 1200px; margin: 0 auto; line-height: 1.8; }
+    h1 { font-family: var(--font-heading); font-size: 3rem; color: var(--navy); margin-bottom: 2rem; }
+    h2 { font-family: var(--font-heading); color: var(--navy); margin: 2rem 0 1rem; }
+    footer { background: #060d1c; padding: 3rem 5% 2rem; color: rgba(255,255,255,0.4); text-align: center; }
+    .btn-primary { background: linear-gradient(135deg, var(--electric), var(--teal)); color: white; text-decoration: none; padding: 0.9rem 2.2rem; border-radius: 10px; font-weight: 600; display: inline-block; margin-top: 2rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">
+    CUBESTONE
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="content-section">
+    <h1>About Cubestone Consulting</h1>
+    <p>Welcome to the detailed history and mission of Cubestone Consulting. Established in May 2018 and fully registered with the National Board of Accountants and Auditors (NBAA) in July 2018, we have grown into a leading multi-disciplinary firm in Tanzania.</p>
+    
+    <h2>Our Vision</h2>
+    <p>To be the premier provider of integrated financial and technological solutions, enabling businesses in East Africa to achieve sustainable growth through transparency and innovation.</p>
+
+    <h2>Our Journey</h2>
+    <p>Starting with a small office in Dar es Salaam, we recognized a gap in the market for professional services that combined traditional accounting with modern ICT infrastructure. Today, we serve over 40 active clients across various sectors, including logistics, construction, and retail.</p>
+
+    <h2>Our Approach</h2>
+    <p>We believe in "Fixed Pricing" models to remove the anxiety of hourly billing, allowing our consultants to focus entirely on the quality of the solution rather than the time spent. Our team brings together ACCA, CPA(T), and SAP Certified professionals to provide a 360-degree view of your business health.</p>
+
+    <a href="index.html#contact" class="btn-primary">Work With Us</a>
+</main>
+
+<footer>
+    <p>&copy; 2024 Cubestone Consulting. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
